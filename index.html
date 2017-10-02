@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Youcollide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <!-- <link rel="stylesheet" href="libs/morris.js/morris.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.css">
+    <link href="libs/jquery-ui-daterangepicker/jquery.comiseo.daterangepicker.css" rel="stylesheet">
+    <link href="libs/jquery-ui/jquery-ui.min.css" rel="stylesheet">
+    <link href="libs/zozo-tabs/zozo.tabs.min.css" rel="stylesheet">
+    <link href="libs/fancyBox/source/jquery.fancybox.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!--MODALS-->
+<div class="modal-wrapper">
+    <div class="invite-links modal">
+        <div class="modal-head">
+            <div class="h2-like modal-header" style="background-image: url(img/icons/link-logo-hov.png)">
+                Invite Links
+            </div>
+            <div class="close right"></div>
+        </div>
+        <div class="clear"></div>
+        <div class="new-input-wrapper">
+            <input type="text" placeholder="Guest link" class="base-input full-width-input">
+            <span class="copy-btn inner-copy-btn">Copy</span>
+        </div>
+        <div class="new-input-wrapper bg-bottom-indent">
+            <input type="text" placeholder="Guest link" class="base-input full-width-input">
+            <span class="copy-btn inner-copy-btn">Copy</span>
+        </div>
+    </div>
+
+
+
+    <div class="tracking-links modal">
+        <div class="modal-head">
+            <div class="h2-like modal-header" style="background-image: url(img/icons/track-hov.png)">
+                Tracking Links
+            </div>
+            <div class="close right"></div>
+        </div>
+        <div class="clear"></div>
+
+        <form action="">
+            <div class="add-input-wrapper">
+                <input type="text" placeholder="Past Link To Track" class="base-input">
+                <input type="submit" class="add-btn" value="Add">
+            </div>
+
+        </form>
+
+        <div class="links-wrapper">
+            <div class="link">
+                <div class="link-name">Game Grumps - The Best Of </div><span class="views right">274</span>
+                <a href="" class="link-address">http://bit.ly/29TIwEA</a> <span class="copy-btn">Copy</span>
+            </div>
+
+            <div class="link">
+                <div class="link-name">Game Grumps - The Best Of </div><span class="views right">274</span>
+                <a href="" class="link-address">http://bit.ly/29TIwEA</a> <span class="copy-btn">Copy</span>
+            </div>
+
+        </div>
+        <div class="partner"></div>
+    </div>
+
+    <div class="add-compaign modal">
+        <div class="modal-head">
+            <div class="h2-like modal-header" style="background-image: url(img/icons/plus-logo.png)">
+                New Campaign
+            </div>
+            <div class="close right"></div>
+        </div>
+
+        <div class="new-input-wrapper">
+            <form action="">
+            <div class="drag-area">
+                <div class="drag-note">Upload campaign cover</div>
+            </div>
+
+            <input type="text" placeholder="Campaigne Title" class="base-input full-width-input">
+
+            <input type="submit" class="base-modal-btn" value="Create">
+            </form>
+        </div>
+    </div>
+
+    <div class="payment-history modal">
+        <div class="modal-head">
+            <div class="h2-like [ modal-header without-icon ]">
+                Payment history
+            </div>
+            <div class="close right"></div>
+        </div>
+        <div class="base-table">
+            <div class="table-head">
+                <div class="table-row">
+                    <div class="row-data">Date</div>
+                    <div class="row-data">Type</div>
+                    <div class="row-data">Amount</div>
+
+                </div>
+            </div>
+            <div class="table-body">
+                <div class="table-row">
+                    <div class="row-data">05/06/16</div>
+                    <div class="row-data">Charge</div>
+                    <div class="row-data">
+                        50$
+                        <span class="view-pdf">PDF</span>
+                    </div>
+
+                </div>
+                <div class="table-row">
+                    <div class="row-data">05/06/16</div>
+                    <div class="row-data">Charge</div>
+                    <div class="row-data">
+                        50$
+                        <span class="view-pdf">PDF</span>
+                    </div>
+
+                </div>
+                <div class="table-row">
+                    <div class="row-data">05/06/16</div>
+                    <div class="row-data">Charge</div>
+                    <div class="row-data">
+                        50$
+                        <span class="view-pdf">PDF</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="base-modal-btn back-to-sett-btn">Back to Settings</div>
+    </div>
+
+    <div class="settings modal">
+        <div class="modal-head">
+            <div class="h2-like [ modal-header without-icon ]">
+                Settings
+            </div>
+            <div class="close right"></div>
+        </div>
+        <div class="settings-wrapper ">
+            <form action="" class="creditly-wrapper">
+                <div class="user">
+                    <div class="bg-user-img" style="background-image: url(img/icons/camp-logo.png)"></div>
+                    <div class="h2-like">H&M</div>
+                    <p>Brian Golbert</p>
+                    <p>briangol@gmail.com</p>
+                </div>
+
+                <div class="subscribtion">
+
+                    <p>Choose your subscribtion plan</p>
+                    <ul class="js-subs-plans">
+                        <li class="active">
+                            <p>5 clips</p>
+                            <p class="emphasize">129$/month</p>
+                        </li>
+                        <li>
+                            <p>5 clips</p>
+                            <p class="emphasize">129$/month</p>
+                        </li>
+                        <li>
+                            <p>5 clips</p>
+                            <p class="emphasize">129$/month</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="new-input-wrapper">
+                    <input type="email" placeholder="briangol@gmail.com" class="base-input full-width-input">
+                </div>
+                <div class="new-input-wrapper">
+                    <input type="password" placeholder="Password" class="base-input full-width-input">
+                </div>
+                <div class="new-input-wrapper">
+                    <input type="tel" placeholder="VAT Number" class="base-input full-width-input">
+                </div>
+                <div class="new-input-wrapper">
+                    <input type="text" placeholder="Card number" class="base-input full-width-input credit-card-number">
+                    <span class="visa inner-copy-btn" style="background-image: url(img/icons/visa.png)"></span>
+                </div>
+                <div class="new-input-wrapper">
+                    <input type="text" placeholder="Seciurity Code" class="base-input indent-between-input security-code">
+                    <input type="text" placeholder="Expires (mm/yyyy)" class="base-input expiration-month-and-year">
+                </div>
+
+                <div class="payment-link js-open-hist">Watch payment history</div>
+
+                <input type="submit" value="Save" class="base-modal-btn">
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<div class="notification">
+    <p>You've been granted access to the
+        performance data of ....</p>
+</div>
+
+
+<div class="wrapper">
+
+    <aside class="left">
+        <div class="logo centered-text">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="side-item dashboard-btn js-open-dash closed-arrow">
+            Dashboard
+        </div>
+        <ul class="side-item__dropdown">
+            <li class="dropdown-item js-side-sub-dropdown opened-arrow">
+                Old Campaigns
+            </li>
+            <li class="subitem__dropdown">
+                <ul>
+                    <li class="compaigne">
+                        <span class="compaign__img" style="background-image: url(img/icons/camp-logo.png)"></span>
+                        Compaign 1
+                    </li>
+                    <li class="compaigne">
+                        <span class="compaign__img" style="background-image: url(img/icons/camp-logo.png)"></span>
+                        Compaign 2
+                    </li>
+                    <li class="compaigne">
+                        <span class="compaign__img" style="background-image: url(img/icons/camp-logo.png)"></span>
+                        Compaign 3
+                    </li>
+                    <li class="compaigne">
+                        <span class="compaign__img" style="background-image: url(img/icons/camp-logo.png)"></span>
+                        Compaign 4
+                    </li>
+                    <li class="compaigne">
+                        <span class="compaign__img" style="background-image: url(img/icons/camp-logo.png)"></span>
+                        Compaign 5
+                    </li>
+
+                </ul>
+            </li>
+            <li class="dropdown-item js-side-sub-dropdown opened-arrow">
+                Active Campaigns
+            </li>
+            <li class="subitem__dropdown">
+                <ul>
+                    <li class="compaigne">
+                        <span class="compaign__img" style="background-image: url(img/icons/camp-logo.png)"></span>
+                        <p>Subitem</p>
+                    </li>
+                    <li class="compaigne">
+                        <span class="compaign__img" style="background-image: url(img/icons/camp-logo.png)"></span>
+                        <p>Subitem</p>
+                    </li>
+                </ul>
+            </li>
+            <li class="non-dropdown-item">
+                Active Campaigns
+            </li>
+        </ul>
+        <div class="side-item new-campaign-btn js-add-camp">New Campaign</div>
+    </aside>
+
+    <main class="left">
+        <div id="main-tabbed-nav" class="main-tabs">
+            <ul class="top-menu">
+                <li><a>General</a></li>
+                <li><a>Local</a></li>
+                <div class="buttons-group">
+                    <div class="button btn-note js-open-note">Notification <span class="new-note"></span></div>
+                    <div  class="button btn-invite">Invite Links</div>
+                    <div  class="button btn-tracking">Tracking Links</div>
+                </div>
+                <div class="user-account js-open-user-account opened-arrow">
+                    <div class="user-img right" style="background-image: url(img/icons/camp-logo.png)"></div>
+                    <p class="user-name">H&M</p>
+                    <p class="user-count">Budget $ 9,630</p>
+                </div>
+                <ul class="account__dropdown">
+                    <li class="js-open-sett"><a href="">Setting</a></li>
+                    <li><a href="">Sign Out</a></li>
+                </ul>
+            </ul>
+
+            <div>
+                <div>
+                    <div id="graph-tabbed-nav" class="inner-tabs shadow">
+
+                        <ul>
+                            <li><a>Views</a></li>
+                            <li><a>Clicks</a></li>
+                            <li><a>Retention</a></li>
+                        </ul>
+                        <div>
+                            <div>
+                                <div class="chart" id="first-chart" style="padding: 0">
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class="chart" id="second-chart" style="padding:0">
+
+                                </div>
+                            </div>
+                            <div>
+                                <div class=" chart" id="third-chart" style="padding:0">
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="month__dropdown js-month-dropdown opened-arrow">
+                        First month
+                    </div>
+                    <ul class="month__dropdown-list">
+                        <li>One Day</li>
+                        <li>First Week</li>
+                        <li>Last Week</li>
+                        <li class="active">First Month</li>
+                        <li>Last Month</li>
+                        <li>Lifetime</li>
+                    </ul>
+
+                    <div class="sections-wrapper">
+
+                        <section class="info-col col-6-right-marg stat-wide-col">
+                            <div class="h1-like centered-text">Social Interactions</div>
+                            <div class="flex-info-parts">
+                                <div>
+                                    <div class="h3-like">Likes</div>
+                                    <div class="info-value h3-like">2056</div>
+                                </div>
+                                <div>
+                                    <div class="h3-like">Dislikes</div>
+                                    <div class="info-value h3-like">205</div>
+                                </div>
+                                <div>
+                                    <div class="h3-like">Comments</div>
+                                    <div class="info-value h3-like">198</div>
+                                </div>
+                                <div>
+                                    <div class="h3-like">Shares</div>
+                                    <div class="info-value h3-like">104</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="info-col col-6-s stat-wide-col">
+                            <div class="h1-like centered-text">Impact</div>
+                            <div class="flex-info-parts">
+                                <div>
+                                    <div class="h3-like">Views</div>
+                                    <div class="info-value h3-like">5 489</div>
+                                </div>
+                                <div>
+                                    <div class="h3-like">Av. View Duration</div>
+                                    <div class="info-value h3-like">4m 13s</div>
+                                </div>
+
+                                <div>
+                                    <div class="h3-like">Watch Time</div>
+                                    <div class="info-value h3-like">15h 34m</div>
+                                </div>
+                                <div>
+                                    <div class="h3-like">Clicks</div>
+                                    <div class="info-value h3-like">504</div>
+                                </div>
+                                <div>
+                                    <div class="h3-like">Conversion</div>
+                                    <div class="info-value h3-like">5,4%</div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="clear"></div>
+
+                        <section class="col-12">
+                            <div class="info-col col-3-right-marg stat-thin-col">
+                                <div class="h1-like centered-text">Age target</div>
+                                <div id="age" class="age-bars" style="height: 90px;width:100%"></div>
+                            </div>
+
+                            <div class="info-col col-3-right-marg stat-thin-col">
+                                <div class="h1-like centered-text">Gender target</div>
+                                <div class="donut-wrapper col-6">
+                                    <svg viewbox="0 0 100 100" class="donut-chart left">
+                                        <circle cx="50" cy="50" r="40" fill="transparent"/>
+                                        <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="3" stroke="#be1d83" stroke-dasharray="265" stroke-dashoffset="355"/>
+                                        <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="5" stroke="#00a6e8" stroke-dasharray="239" stroke-dashoffset="45"/>
+                                    </svg>
+                                </div>
+                                <div class="donut-values col-6">
+                                    <div class="value-female h3-like"><span>75% </span>Female</div>
+                                    <div class="value-male h3-like"><span>25% </span>Male</div>
+                                </div>
+                            </div>
+                            <div class="info-col col-3-right-marg stat-thin-col">
+                                <div class="h1-like centered-text">Devices</div>
+                                <div class="devices-wrap">
+                                    <div class=" col-12">
+                                        <div class="device-item" style="background-image: url(img/icons/desktop.png)">
+                                            <div class="h3-like">Desktop</div>
+                                            <div class="info-value h3-like">58%</div>
+                                        </div>
+                                        <div class="device-item" style="background-image: url(img/icons/tv.png)">
+                                            <div class="h3-like">TV</div>
+                                            <div class="info-value h3-like">8%</div>
+                                        </div>
+                                    </div>
+                                    <div class=" col-12">
+                                        <div class="device-item" style="background-image: url(img/icons/tablet.png); background-position: 18px">
+                                            <div class="h3-like">Tablet</div>
+                                            <div class="info-value h3-like">12%</div>
+                                        </div>
+                                        <div class="device-item" style="background-image: url(img/icons/mobile.png); background-position: 32px">
+                                            <div class="h3-like">Mobile</div>
+                                            <div class="info-value h3-like">22%</div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="info-col col-3-s stat-thin-col">
+                                <div class="h1-like centered-text">Popular Regions</div>
+                                <div class="regions__section h3-like">
+                                    <div class="region-col">
+                                        <div>Ukraine: <span class="info-value">12%</span></div>
+                                        <div>Sweden: <span class="info-value">18%</span></div>
+                                        <div>Russia: <span class="info-value">25%</span></div>
+                                    </div>
+                                    <div class="region-col">
+                                        <div>Hungary: <span class="info-value">7%</span></div>
+                                        <div>USA: <span class="info-value">25%</span></div>
+                                        <div>Italy: <span class="info-value">13%</span></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </section>
+                        <section class="comments col-12">
+                            <div class="user-comment">
+                                <div class="user-image left" style="background-image: url(img/logo-user.jpg)"></div>
+                                <div class="comment-details left">
+                                    <a class="name-comment h2-like" href="">Jango Meldar</a><span class="comment-time">4 months ago to </span><a class="comment-to" href="">It was easy</a>
+                                    <p>Alright, who else tried to press the "Skip Ad" button?..</p>
+                                    <div class="comment-rate">148 <span></span></div>
+                                </div>
+
+                            </div>
+                            <div class="user-comment">
+                                <div class="user-image left" style="background-image: url(img/logo-user.jpg)"></div>
+                                <div class="comment-details left">
+                                    <a class="name-comment h2-like" href="">Jango Meldar</a><span class="comment-time">4 months ago to </span><a class="comment-to" href="">It was easy</a>
+                                    <p>Alright, who else tried to press the "Skip Ad" button?..</p>
+                                    <div class="comment-rate">148 <span></span></div>
+                                </div>
+
+                            </div>
+                            <div class="user-comment">
+                                <div class="user-image left" style="background-image: url(img/logo-user.jpg)"></div>
+                                <div class="comment-details left">
+                                    <a class="name-comment h2-like" href="">Jango Meldar</a><span class="comment-time">4 months ago to </span><a class="comment-to" href="">It was easy</a>
+                                    <p>Alright, who else tried to press the "Skip Ad" button?..</p>
+                                    <div class="comment-rate">148 <span></span></div>
+                                </div>
+
+                            </div>
+                        </section>
+                    </div>
+
+                </div>
+
+
+
+                <div>
+                    <div class="local-wrapper">
+                        <div class="top-row col-12">
+                            <div class="top-row__btn left active-btn">Engagement</div>
+                            <div class="top-row__btn left">Reach</div>
+                            <div class="datapicker">
+                                <input type="text" id="datepick">
+                                <span class="calendar-icon"></span>
+                            </div>
+                        </div>
+
+                        <div class="engage-row-wrapper">
+                            <div class="user-enagage col-4-s">
+                                <section class="user-video">
+                                    <div class="video">
+                                        <a class="various fancybox.iframe play-fancy" href="https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=true">
+                                            <i class="youtube-play"></i>
+                                        </a>
+                                        <a class="various fancybox.iframe" href="https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=true">
+                                            <img src="https://i.ytimg.com/vi/YVkUvmDQ3HY/hqdefault.jpg" alt="" class="fancy-img">
+                                        </a>
+
+                                    </div>
+
+                                    <div class="about-user">
+                                        <div class="user-img left" style="background-image: url(img/you-logo.jpg)"></div>
+                                        <a href="" class="user-name">Gabriella Stone</a>
+                                        <div class="user-subscribe">204 368 Subscribers</div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </section>
+
+                                <section class="statistic">
+                                    <div class="info-col col-6">
+                                        <div class="h1-like centered-text">Gender target</div>
+
+                                        <svg viewbox="0 0 100 100" class="donut-chart">
+                                            <circle cx="50" cy="50" r="40" fill="transparent"/>
+                                            <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="3" stroke="#be1d83" stroke-dasharray="265" stroke-dashoffset="355"/>
+                                            <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="5" stroke="#00a6e8" stroke-dasharray="239" stroke-dashoffset="45"/>
+                                        </svg>
+
+                                        <div class="donut-values-bottom col-12">
+                                            <div class="value-female h3-like col-6 centered-text"><span>75% </span>Female</div>
+                                            <div class="value-male h3-like col-6 centered-text"><span>25% </span>Male</div>
+                                        </div>
+                                    </div>
+                                    <div class="info-col col-6">
+                                        <div class="col-12 border-left-light">
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Views</div>
+                                                <div class="info-value h3-like">5 489</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Likes</div>
+                                                <div class="info-value h3-like">2 056</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Watch Time</div>
+                                                <div class="info-value h3-like">15h 35m</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Conversion</div>
+                                                <div class="info-value h3-like">5,4%</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+
+
+                            <div class="user-enagage col-4-s">
+                                <section class="user-video">
+                                    <a class="various fancybox.iframe" href="https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=true">
+                                        <span class="youtube-play"></span>
+                                    </a>
+                                    <a class="various fancybox.iframe" href="https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=true">
+                                        <img src="https://i.ytimg.com/vi/YVkUvmDQ3HY/hqdefault.jpg" alt="" class="fancy-img">
+                                    </a>
+
+                                    <div class="about-user">
+                                        <div class="user-img left" style="background-image: url(img/you-logo.jpg)"></div>
+                                        <div class="user-name">Gabriella Stone</div>
+                                        <div class="user-subscribe">204 368 Subscribers</div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </section>
+
+                                <section class="statistic">
+                                    <div class="info-col col-6">
+                                        <div class="h1-like centered-text">Gender target</div>
+
+                                        <svg viewbox="0 0 100 100" class="donut-chart">
+                                        <circle cx="50" cy="50" r="40" fill="transparent"/>
+                                        <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="3" stroke="#be1d83" stroke-dasharray="265" stroke-dashoffset="355"/>
+                                        <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="5" stroke="#00a6e8" stroke-dasharray="239" stroke-dashoffset="45"/>
+                                    </svg>
+
+                                        <div class="donut-values-bottom col-12">
+                                            <div class="value-female h3-like col-6 centered-text"><span>75% </span>Female</div>
+                                            <div class="value-male h3-like col-6 centered-text"><span>25% </span>Male</div>
+                                        </div>
+                                    </div>
+                                    <div class="info-col col-6">
+                                        <div class="col-12 border-left-light">
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Views</div>
+                                                <div class="info-value h3-like">5 489</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Likes</div>
+                                                <div class="info-value h3-like">2 056</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Watch Time</div>
+                                                <div class="info-value h3-like">15h 35m</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Conversion</div>
+                                                <div class="info-value h3-like">5,4%</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+
+
+                            <div class="user-enagage col-4-s">
+                                <section class="user-video">
+                                    <a class="various fancybox.iframe" href="https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=true">
+                                        <span class="youtube-play"></span>
+                                    </a>
+                                    <a class="various fancybox.iframe" href="https://www.youtube.com/embed/YVkUvmDQ3HY?autoplay=true">
+                                        <img src="https://i.ytimg.com/vi/YVkUvmDQ3HY/hqdefault.jpg" alt="" class="fancy-img">
+                                    </a>
+
+                                    <div class="about-user">
+                                        <div class="user-img left" style="background-image: url(img/you-logo.jpg)"></div>
+                                        <div class="user-name">Gabriella Stone</div>
+                                        <div class="user-subscribe">204 368 Subscribers</div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </section>
+
+                                <section class="statistic">
+                                    <div class="info-col col-6">
+                                        <div class="h1-like centered-text">Gender target</div>
+
+                                        <svg viewbox="0 0 100 100" class="donut-chart">
+                                        <circle cx="50" cy="50" r="40" fill="transparent"/>
+                                        <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="3" stroke="#be1d83" stroke-dasharray="265" stroke-dashoffset="355"/>
+                                        <circle cx="50" cy="50" r="40" fill="transparent" stroke-width="5" stroke="#00a6e8" stroke-dasharray="239" stroke-dashoffset="45"/>
+                                    </svg>
+
+                                        <div class="donut-values-bottom col-12">
+                                            <div class="value-female h3-like col-6 centered-text"><span>75% </span>Female</div>
+                                            <div class="value-male h3-like col-6 centered-text"><span>25% </span>Male</div>
+                                        </div>
+                                    </div>
+                                    <div class="info-col col-6">
+                                        <div class="col-12 border-left-light">
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Views</div>
+                                                <div class="info-value h3-like">5 489</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Likes</div>
+                                                <div class="info-value h3-like">2 056</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Watch Time</div>
+                                                <div class="info-value h3-like">15h 35m</div>
+                                            </div>
+                                            <div class="col-6 centered-text top-bot-md-indent">
+                                                <div class="h3-like">Conversion</div>
+                                                <div class="info-value h3-like">5,4%</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/4.3.0/min/dropzone.min.js"></script>
+<script src="libs/zozo-tabs/zozo.tabs.min.js"></script>
+<script src="libs/jquery-ui/jquery-ui.min.js"></script>
+<script src="libs/flot/jquery.flot.js"></script>
+<script src="libs/moment/moment.min.js"></script>
+<script src="libs/chartist-js-master/chartist.min.js"></script>
+<script src="libs/jquery-ui-daterangepicker/jquery.comiseo.daterangepicker.js"></script>
+<script src="libs/creditly-master/creditly.js"></script>
+<script src="libs/fancyBox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+<script src="libs/fancyBox/source/jquery.fancybox.js"></script>
+<script src="js/common.js"></script>
+</body>
+</html>

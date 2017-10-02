@@ -1,0 +1,93 @@
+/*!
+ * Copyright (c) 2014 Tamble, Inc.
+ * Licensed under MIT (https://github.com/tamble/jquery-ui-daterangepicker/raw/master/LICENSE.txt)
+ */
+
+.comiseo-daterangepicker-triggerbutton.ui-button {
+	float: right;
+	text-align: left;
+	width: 220px;
+	color: #cbcbcb;
+	outline: none;
+}
+
+.comiseo-daterangepicker {
+	position: absolute;
+	left: inherit !important;
+	right: 40px;
+	top: 180px !important;
+	/*right: 40px !important;*/
+	padding: 30px;
+}
+
+.comiseo-daterangepicker-mask {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	/* required for IE */
+	background-color: #fff;
+	opacity: 0;
+	filter: alpha(opacity = 0);
+}
+
+.comiseo-daterangepicker-presets,
+.comiseo-daterangepicker-calendar {
+	vertical-align: top;
+}
+
+.comiseo-daterangepicker-presets {
+	width: 480px;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-presets {
+	padding: 2px 7px 7px 2px;
+}
+
+
+.ui-menu {
+	white-space: nowrap;
+}
+
+.comiseo-daterangepicker .ui-widget-content,
+.comiseo-daterangepicker .ui-datepicker .ui-state-highlight {
+	border-width: 0;
+	/*padding-right: 4px;*/
+}
+
+.comiseo-daterangepicker .ui-datepicker .ui-datepicker-today .ui-state-highlight {
+	border-width: 1px;
+}
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-calendar {
+	border-left-width: 1px;
+}
+
+
+.comiseo-daterangepicker-right .comiseo-daterangepicker-buttonpanel {
+	float: left;
+}
+
+.comiseo-daterangepicker-left .comiseo-daterangepicker-buttonpanel {
+	/*float: right;*/
+	text-align: center;
+}
+
+.comiseo-daterangepicker-buttonpanel > button  {
+	width: 140px;
+	margin: 40px auto 0;
+	padding: 12px 35px;
+	text-align: center;
+	color: #FFF;
+	background-color: #00a6e8;
+	border-radius: 3px;
+	outline: none;
+}
+
+/* themeable styles */
+.comiseo-daterangepicker-calendar .ui-state-highlight a.ui-state-default {
+	color: #fff;
+}

@@ -1,0 +1,968 @@
+@font-face
+    font-family: MuseoSansCyrl
+    src: url('../fonts/MuseoSansCyrl_300.otf')
+
+
+//BASE COLORS
+$primary-color: #00a6e8
+$pink-accent: #be1d83
+$main-bg-color: #f9f9fb
+$non-active-color: #737d8a
+
+//BASE FONTS
+$museo-font: MuseoSansCyrl, sans-serif
+
+input
+    border: none
+    outline: none
+
+
+//SIMPLE GRID
+.col-2
+    float: left
+    width: 20%
+.col-3
+    float: left
+    width: 25%
+.col-4
+    float: left
+    width: 33%
+.col-6
+    float: left
+    width: 50%
+.col-12
+    float: left
+    width: 100%
+
+
+
+//COLS WITH MARGINS
+
+.col-3-s
+    float: left
+    width: 24.118%
+
+.col-3-right-marg
+    @extend .col-3-s
+    margin-right: 1.176%
+
+.col-4-s
+    float: left
+    width: 32.549333333%
+
+.col-4-right-marg
+    @extend .col-4-s
+    margin-right: 1.176%
+
+.col-6-s
+    float: left
+    width: 49.412%
+
+.col-6-right-marg
+    @extend .col-6-s
+    margin-right: 1.176%
+
+
+.shadow,
+.info-col
+    box-shadow: 0px 0px 12.35px 0.65px rgba(19, 110, 157, 0.14)
+
+
+.sm-indent
+    padding: 5px 0
+
+.bg-top-indent
+    margin-top: 60px
+
+.sm-bottom-indent
+    margin-bottom: 20px
+
+.md-bottom-indent
+    margin-bottom: 25px
+
+.bg-bottom-indent
+    margin-bottom: 60px
+
+.indent-between-input
+    margin-right: 58px
+
+.top-bot-md-indent
+    margin: 40px 0
+
+.h1-like
+    font-family: $museo-font
+    font-size: 18px
+    margin-bottom: 20px
+.h2-like
+    font-family: $museo-font
+    font-size: 16px
+.h3-like
+    font-family: $museo-font
+    //font-weight: bold
+    font-size: 14px
+
+.clear
+    clear: both
+.left
+    float: left
+.right
+    float: right
+.fixed
+    position: fixed
+.centered-text
+    text-align: center
+.base-font
+    font: 14px $museo-font
+.active-btn
+    background-color: $primary-color
+
+//customize zozo tabs
+.z-tabs.horizontal.z-shadows > ul > li.z-first > a
+    box-shadow: none
+.z-tabs > .z-container > .z-content > .z-content-inner
+    position: relative
+    padding: 40px
+    width: 100%
+    box-sizing: border-box
+.z-content-inner .z-content-inner
+    width: 100%
+    box-sizing: border-box
+    padding: 60px 0 39px 0 !important
+
+
+.z-tabs.horizontal.z-shadows > .z-container
+    border: none
+    box-shadow: none
+
+.z-tabs.horizontal.top > ul > li
+    background-color: transparent
+    .z-link
+        border: none
+        background: transparent
+        box-shadow: none
+        top: 0
+        @extend .base-font
+
+.main-tabs.z-tabs.horizontal.top > ul > li
+    display: inline-block
+    width: 220px
+    margin-top: 51px
+    text-align: center
+    color: $non-active-color
+    border: none
+    .z-link
+        color: #cececf
+    &.z-active
+        margin-top: 49px
+        padding-bottom: 0
+        border-bottom: 3px solid $primary-color
+        .z-link
+            background-color: $main-bg-color
+            border: none
+            background: transparent
+            box-shadow: none
+            color: #000
+    &:hover
+        cursor: pointer
+
+.inner-tabs
+    width: 100%
+    margin-bottom: 20px
+    padding: 30px 90px
+    box-sizing: border-box
+    .z-tabs-nav
+        width: 360px
+        margin: 0 auto
+        background-color: $non-active-color
+        .z-tab
+            width: 118px
+            color: $non-active-color
+            border-top: 1px solid $primary-color
+            border-bottom: 1px solid $primary-color
+            border-right: 1px solid $primary-color
+            text-align: center
+
+            &:nth-child(1)
+                border-left: 1px solid $primary-color
+                border-top-left-radius: 2px
+                border-bottom-left-radius: 2px
+            &:nth-child(3)
+                border-top-right-radius: 2px
+                border-bottom-right-radius: 2px
+            .z-link
+                padding: 11px 20px
+                text-shadow: none
+                color: #000
+                transition: .3s
+            &.z-active
+                margin: 0
+                padding-bottom: 0 !important
+                text-shadow: none !important
+                background-color: $primary-color
+                .z-link
+                    color: #FFF
+            &:hover
+                background-color: $primary-color
+                .z-link
+                    color: #FFF
+
+//modals
+.notification
+    display: none
+    position: absolute
+    width: 250px
+    padding: 30px 40px 30px 70px
+    background-color: #FFF
+    background-image: url(../img/icons/notf-warn.png)
+    background-repeat: no-repeat
+    background-position: 5% 55%
+    right: calc(18% + 150px)
+    top: 80px
+    z-index: 10
+    transition: .3s
+
+.modal-wrapper
+    display: none
+    position: fixed
+    justify-content: center
+    align-content: center
+    align-items: center
+    overflow-y: auto
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    padding: 20px 0
+    box-sizing: border-box
+    background-color: rgba(51,65, 71, .7)
+    z-index: 100
+.modal
+    display: none
+    position: relative
+    background-color: #FFF
+    border-radius: 3px
+    width: 600px
+    margin: auto
+    //transform: translate(-50%,-50%)
+    z-index: 999
+.close
+    position: absolute
+    background-image: url(../img/icons/close-logo.png)
+    width: 20px
+    height: 20px
+    right: 15px
+    top: 20px
+    &:hover
+        cursor: pointer
+
+.modal-head
+    border-bottom: 1px solid #e7e8e9
+
+.modal-header
+    padding: 20px 0 20px 60px
+    background-position: 21px 18px
+    background-repeat: no-repeat
+.without-icon
+    padding: 20px
+.base-input
+    outline: none
+    border: none
+    border-bottom: 1px solid #7f8793
+    padding: 3px 0
+.copy-btn
+    font-size: 10px
+    padding: 2px 4px
+    margin-left: 4px
+    border: 1px solid $primary-color
+    border-radius: 2px
+    color: $primary-color
+    text-transform: uppercase
+    &:hover
+        cursor: pointer
+
+.base-modal-btn
+    display: block
+    width: 140px
+    margin: 40px auto 50px
+    padding: 12px 45px
+    text-align: center
+
+    color: #FFF
+    background-color: $primary-color
+    border-radius: 2px
+    &:hover
+        cursor: pointer
+
+.add-input-wrapper
+    width: 280px
+    margin: 30px auto
+
+.tracking-links
+    display: none
+    width: 500px
+    z-index: 1000
+
+.add-btn
+    @extend .base-modal-btn
+    display: inline-block
+    text-transform: uppercase
+    padding: 4px 0
+    margin: 0 0 0 20px
+    width: 80px
+.links-wrapper
+    padding: 0 20px 65px 20px
+
+.link
+    position: relative
+    margin-top: 35px
+    font-size: 14px
+.link-address
+    color: $primary-color
+    text-decoration: none
+
+.views
+    position: absolute
+    display: inline-block
+    width: 60px
+    right: 0px
+    top: 0
+    background-image: url(../img/icons/view.png)
+    background-repeat: no-repeat
+    background-position: 30px
+
+.partner
+    position: absolute
+    background-image: url(../img/icons/bit-logo.png)
+    background-repeat: no-repeat
+    bottom: 15px
+    right: 30px
+    width: 52px
+    height: 24px
+
+.invite-links
+    display: none
+    padding-bottom: 55px
+
+.new-input-wrapper
+    position: relative
+    width: 400px
+    margin: 30px 100px 0 100px
+
+.full-width-input
+    display: inline-block
+    width: 100%
+
+.inner-copy-btn
+    position: absolute
+    right: 0
+    top: 2px
+
+.add-compaign
+    display: none
+
+
+.drag-area
+    position: relative
+    width: 100%
+    height: 60px
+    margin: 30px 0 50px
+    border: 1px dashed #737d8a
+    background-color: #f1f2f3
+    &:hover
+        cursor: pointer
+.drag-note
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    color: #737d8a
+    padding: 10px 0 10px 40px
+    background-image: url("../img/icons/upload.png")
+    background-repeat: no-repeat
+    background-position: 0 7px
+
+
+.base-table
+    width: 100%
+    font-size: 14px
+
+.table-row
+    width: 100%
+    height: 53px
+    border-bottom: 1px solid #e7e8e9
+.row-data
+    float: left
+    width: calc(33% - 20px)
+    padding: 18px 0 18px 20px
+
+    &:nth-child(3)
+        width: calc(34% - 20px)
+
+.table-head
+    font-weight: bold
+    .row-data
+        width: calc(33% - 18px)
+
+.view-pdf
+    position: absolute
+    right: 20px
+    @extend .copy-btn
+
+
+.settings-wrapper
+    text-align: center
+    color: #737d8a
+
+.user
+    width: 200px
+    margin: 40px auto
+    text-align: center
+    .h2-like
+        font-weight: bold
+.visa
+    width: 30px
+    height: 20px
+    top: 0
+
+.subscribtion
+    p
+        font-weight: bold
+    ul
+        margin-top: 20px
+        margin-bottom: 45px
+        li
+            display: inline-block
+            width: 160px
+            opacity: .6
+            padding: 30px 0
+            border: 1px solid #b9bec4
+            border-radius: 2px
+            &:nth-child(2)
+                margin: 0 10px
+            &:hover
+                cursor: pointer
+            &.active
+                opacity: 1
+                border: 1px solid $primary-color
+.payment-link
+    display: static
+    margin: 50px 0 0
+    color: $primary-color
+    font-weight: bold
+    &:hover
+        cursor: pointer
+
+.emphasize
+    color: $primary-color
+    font-weight: bold
+
+
+//dragzone
+.dz-image,
+.dz-details,
+.dz-progress,
+.dz-error-message,
+.dz-error-mark
+    display: none
+.dz-success-mark
+    svg
+        width: 32px
+        margin-left: 20px
+
+
+
+//custom styles
+body
+    position: relative
+    @extend .base-font
+
+aside
+    display: block
+    width: 11.46%
+    min-height: 100vh
+    background-color: $main-bg-color
+
+.closed-arrow:after
+    content: '\23F7'
+
+.opened-arrow:after
+    content: '\23F5'
+
+//    SIDEBAR
+.logo
+    height: 100px
+    width: 100%
+    img
+        margin: 30px auto
+.side-item
+    position: relative
+    height: 70px
+    line-height: 70px
+    padding-left: 36%
+    background-repeat: no-repeat
+    background-position: 16% 50%
+    &:hover
+        cursor: pointer
+.side-item__dropdown
+    padding: 10px 0
+    background-color: #f2f2f5
+.dropdown-item, .non-dropdown-item
+    position: relative
+    color: #a6a6a8
+    padding: 16px 0 16px 16%
+    &:hover
+        cursor: pointer
+
+.subitem__dropdown
+    display: none
+
+.compaigne
+    position: relative
+    padding: 12px 0 12px 36%
+    &:hover
+        cursor: pointer
+
+.compaign__img
+    position: absolute
+    top: 10px
+    left: 17%
+    width: 26px
+    height: 26px
+    border-radius: 13px
+    background-size: 100%
+
+.dashboard-btn
+    color: #FFF
+    background-color: $primary-color
+    background-image: url('../img/icons/dash_logo.png')
+    &:after
+        margin-left: 7px
+        position: absolute
+        top: -1px
+
+.new-campaign-btn
+    background-image: url('../img/icons/plus-logo.png')
+
+//    MAIN
+.chart
+    width: 100%
+    height: 226px
+#first-chart,
+#second-chart,
+#third-chart
+    width: 110%
+
+.age-bars
+    .ct-chart-bar
+        margin-left: -12px
+    .ct-labels
+        text-align: center
+    .ct-label
+        font-size: 11px
+        color: #737d8a
+    .ct-vertical
+        display: none
+
+    .ct-series
+        stroke-width: 15.5%
+        &:hover
+            opacity: .86
+
+    .ct-series-a>line
+        stroke: rgba(203, 60, 142,.4)
+    .ct-series-b>line
+        stroke: rgba(203, 60, 142,.5)
+    .ct-series-c>line
+        stroke: rgba(203, 60, 142,.6)
+    .ct-series-d>line
+        stroke: rgba(203, 60, 142,.7)
+    .ct-series-e>line
+        stroke: rgba(203, 60, 142,.8)
+    .ct-series-f>line
+        stroke: rgba(203, 60, 142,1)
+
+
+main
+    position: relative
+    width: 88.54%
+.top-menu
+    background-color: $main-bg-color
+    height: 100px
+
+.buttons-group
+    position: absolute
+    top: 50%
+    right: 18.588%
+    transform: translate(0, -50%)
+
+.button
+    display: inline-block
+    position: relative
+    margin: 0 30px
+    padding-top: 32px
+    height: 20px
+    color: $non-active-color
+    background-repeat: no-repeat
+    background-position: 50% 0%
+    transition: .3s
+    font: 14px $museo-font
+    &:hover
+        cursor: pointer
+        color: $primary-color
+    &:nth-child(1),
+    &:nth-child(2)
+        &:after
+            content: ''
+            position: absolute
+            display: inline-block
+            width: 1px
+            right: -30px
+            top: 15px
+            height: 23px
+            background-color: #dee0e4
+
+.btn-note
+    background-image: url('../img/icons/bell-logo.png')
+    &:hover
+
+        background-image: url('../img/icons/bell-logo-hov.png')
+
+.new-note
+    position: absolute
+    width: 5px
+    height: 5px
+    border-radius: 3px
+    background-color: #e57373
+    border: 1px solid #FFF
+    top: 4px
+    right: 26px
+
+.btn-invite
+    background-image: url('../img/icons/link-logo.png')
+    &:hover
+        background-image: url('../img/icons/link-logo-hov.png')
+
+.btn-tracking
+    background-image: url('../img/icons/track.png')
+    &:hover
+        background-image: url('../img/icons/track-hov.png')
+
+.user-account
+    position: absolute
+    top: 50%
+    right: 53px
+    width: 16.18%
+    text-align: right
+    transform: translate(0, -50%)
+    font: 14px $museo-font
+    &:after
+        position: absolute
+        top: 16px
+        right: -14px
+        color: #a6a6a8
+    &:hover
+        cursor: pointer
+.account__dropdown
+    display: none
+    position: absolute
+    //display: inline-block
+    width: 160px
+    z-index: 10
+    top: 83px
+    right: 1.5%
+    li
+        text-align: center
+        background-color: #FFF
+        &:first-child
+            border-bottom: 1px solid #e7e8e9
+    a
+        display: block
+        padding: 15px 0
+        color: #000
+        font-family: $museo-font
+        text-decoration: none
+
+.user-name
+    font-size: 18px
+    //font-weight: bold
+    margin-top: 8px
+.user-count
+    font-size: 14px
+    margin-top: 1px
+    color: $non-active-color
+.user-img
+    width: 48px
+    height: 48px
+    margin-left: 24px
+    border-radius: 25px
+    border: 1px solid #767f8c
+    background-size: contain
+.bg-user-img
+    display: inline-block
+    width: 80px
+    height: 80px
+    margin: 10px 0
+    border-radius: 40px
+    border: 1px solid #767f8c
+    background-size: contain
+
+.month__dropdown
+    position: absolute
+    font: 14px $museo-font
+    width: 160px
+    top: 70px
+    right: 130px
+    padding: 11px 0
+    text-align: center
+    background-color: #f9f9fb
+    border: 1px solid #e7e8e9
+    border-radius: 2px
+    &:after
+        position: absolute
+        right: 15px
+    &:hover
+        cursor: pointer
+.month__dropdown-list
+    display: none
+    position: absolute
+    font: 14px $museo-font
+    width: 160px
+    top: 126px
+    right: 130px
+    text-align: center
+    background-color: #f9f9fb
+    border: 1px solid #e7e8e9
+    border-radius: 2px
+    z-index: 10
+.month__dropdown-list>li
+    padding: 10px 0
+    &:hover
+        cursor: pointer
+        color: #9d9d9f
+    &.active
+        color: #9d9d9f
+
+.stat-wide-col
+    height: 100px
+
+.stat-thin-col
+    height: 200px
+
+.flex-info-parts
+    display: flex
+    justify-content: space-around
+
+
+.info-col
+    padding: 16px 0
+    margin-bottom: 20px
+    box-sizing: border-box
+
+.info-value
+    color: #00a6e8
+
+.donut-values
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    align-items: baseline
+    margin-top: 8%
+    &>div
+        width: 80px
+        margin-bottom: 7px
+.donut-values-bottom
+    margin-top: 20px
+
+.value-male span
+    color: #00a6e8
+
+.value-female span
+    color: #cb3c8e
+
+.age-bars
+    margin-top: 60px
+
+.devices-wrap
+    display: flex
+    flex-wrap: wrap
+    align-content: space-around
+
+.devices-wrap>div
+    display: flex
+    justify-content: space-around
+
+.device-item
+    margin: 10px 0 15px
+    background-repeat: no-repeat
+    background-position: 10px
+    &>div
+        margin-left: 55px
+
+.regions__section
+    display: flex
+    justify-content: space-around
+
+.regions__section:nth-child(1),
+.regions__section:nth-child(2)
+    margin-top: 20px
+
+.region-col
+    width: 100px
+    &>div
+        padding: 9px 0
+
+.comments
+    display: flex
+    justify-content: space-between
+    box-sizing: border-box
+    padding: 30px 34px
+    box-shadow: 0px 0px 12.35px 0.65px rgba(19, 110, 157, 0.14)
+
+
+.user-comment
+    font-family: $museo-font
+    font-weight: bold
+    p
+        font-size: 10px
+.user-image
+    display: inline-block
+    width: 60px
+    height: 60px
+    margin-right: 10px
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50%
+.name-comment
+    text-decoration: none
+    color: #000
+.comment-time
+    font-size: 10px
+    color: #c7c7c7
+.comment-to,
+.comment-rate
+    font-size: 10px
+    color: $primary-color
+
+.comment-to
+    text-decoration: none
+
+.comment-rate
+    position: relative
+    font-weight: bold
+    span
+        position: absolute
+        display: inline-block
+        background-image: url(../img/icons/like.png)
+        background-repeat: no-repeat
+        width: 16px
+        height: 16px
+        top: 2px
+        left: 25px
+        &:hover
+            cursor: pointer
+
+.donut-wrapper
+    display: flex
+    justify-content: center
+
+.donut-chart
+    display: flex
+    width: 100px
+    height: 100px
+    margin: auto
+
+
+//Local tab
+.local-wrapper
+    margin: 0
+.top-row__btn
+    margin-right: 10px
+    padding: 7px 15px
+    color: $primary-color
+    border-radius: 4px
+    @extend .base-font
+    &:hover
+        background-color: $primary-color
+        cursor: pointer
+        color: #FFF
+    &.active-btn
+        color: #FFF
+
+.datapicker
+    position: relative
+
+
+.calendar-icon
+    position: absolute
+    top: 6px
+    right: 10px
+    width: 15px
+    height: 17px
+    background-image: url(/img/icons/data.png)
+
+.user-enagage
+    box-shadow: 0px 0px 12.35px 0.65px rgba(19, 110, 157, 0.14)
+    font-family: $museo-font
+    margin-top: 25px
+    margin-right: 1.1%
+
+.engage-row-wrapper>div:last-child
+    margin-right: 0
+
+.video
+    position: relative
+
+.various
+    position: relative
+    display: block
+
+.youtube-play
+    position: absolute
+    top: 140px
+    left: 50%
+    transform: translate(-50%,-50%)
+    background-image: url(../img/icons/youtube-icon-dark.png)
+    background-repeat: no-repeat
+    width: 45px
+    height: 30px
+
+.fancy-img
+    width: 100%
+    height: 295px
+.statistic
+    .h1-like
+        margin-top: 40px
+    .info-col
+        box-shadow: none
+        margin: 0
+        padding: 0
+
+.border-left-light
+    border-left: 1px solid #e7e8e9
+    margin-left: -2px
+
+
+.about-user
+    border-bottom: 1px solid #e7e8e9
+    padding: 15px 5px
+    .user-img
+        margin-right: 10px
+        border: none
+        background-size: cover
+    .user-name
+        margin-bottom: 2px
+        color: #000
+        text-decoration: none
+    .user-subscribe
+        font-size: 14px
+        color: #737d8a
+
+
+//MEDIA QUERIES
+@media only screen and (min-width: 1200px) and (max-width: 1400px)
+    aside
+        width: 12.46%
+    .side-item
+        padding-left: 34%
+    main
+        width: 87.54%
