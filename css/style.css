@@ -472,6 +472,7 @@ aside {
   content: "⏵"; }
 
 .logo {
+  display: block;
   height: 100px;
   width: 100%; }
   .logo img {
